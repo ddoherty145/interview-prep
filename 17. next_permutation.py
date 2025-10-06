@@ -31,6 +31,7 @@
 # 1 <= nums.length <= 100
 # 0 <= nums[i] <= 100
 
+#Solution: Two Pointers
 class Solution(object):
     def nextPermutation(self, nums):
         """
@@ -56,3 +57,27 @@ class Solution(object):
             nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
+
+#Solution: Using Built-in Function
+
+import itertools
+class Solution(object):
+    def nextPermutation(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        permutations = sorted(set(itertools.permutations(nums)))
+        current_permutation = tuple(nums)
+        index = permutations.index(current_permutation)
+        next_index = (index + 1) % len(permutations)
+        next_permutation = permutations[next_index]
+        
+        for i in range(len(nums)):
+            nums[i] = next_permutation[i]
+        return nums
+        while min_heap:
+            current.next = ListNode(heapq.heappop(min_heap))
+            current = current.next
+        return dummy.next
+    
