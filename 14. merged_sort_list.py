@@ -22,7 +22,17 @@
 
 # Input: lists = [[]]
 # Output: []
- 
+
+#Narrative Explanation:
+# Picture yourself as a conductor of a grand orchestra, but instead of musicians, you’re managing k sorted linked lists, each like a line of performers playing notes in ascending order. Your task is to combine all these lines into a single, harmonious performance—a new sorted linked list where all notes flow seamlessly from lowest to highest.
+# For example, imagine three lines of performers:
+
+# First line plays: 1, 4, 5.
+# Second line: 1, 3, 4.
+# Third line: 2, 6.
+# Your job is to guide them into one line that plays: 1, 1, 2, 3, 4, 4, 5, 6. But what if the stage is empty (lists = [])? Or one line has no performers (lists = [[]])?
+
+# Each line could have up to 500 notes, and you might have up to 10,000 lines, with note values ranging from -10,000 to 10,000. The total number of notes won’t exceed 10,000, so you can handle the load. How would you orchestrate this merger to ensure every note is played in perfect order, without missing a beat?
 
 # Constraints:
 
